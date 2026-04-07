@@ -32,6 +32,16 @@ export const weatherSchema = z.object({
     vis_km: z.number(),
     uv: z.number(),
     gust_kph: z.number(),
+    air_quality: z.object({
+      co: z.number(),
+      no2: z.number(),
+      o3: z.number(),
+      so2: z.number(),
+      pm2_5: z.number(),
+      pm10: z.number(),
+      "us-epa-index": z.number(),
+      "gb-defra-index": z.number(),
+    }),
   }),
   forecast: z.object({
     forecastday: z.array(
